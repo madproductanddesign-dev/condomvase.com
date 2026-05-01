@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condom Vase • Romance, Roses & a Little Mischief</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+        body { font-family: 'Inter', system_ui, sans-serif; }
+        .heading-font { font-family: 'Playfair Display', sans-serif; }
+
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.70)), 
+                        url('condomvase.jpg') center/cover no-repeat fixed;
+            background-position: center 32%;   /* lowered for more vase top + rose */
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        .glow { text-shadow: 0 0 25px #fb923c, 0 0 45px #f97316; }
+
+        .logo {
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+        .logo:hover {
+            transform: scale(1.25) rotate(18deg);
+            filter: brightness(1.15);
+        }
+
+        .color-card { transition: all 0.4s ease; }
+        .color-card:hover { transform: translateY(-12px) scale(1.04); }
+    </style>
+</head>
+<body class="bg-zinc-950 text-orange-100">
+
+    <!-- Navbar -->
+    <nav class="bg-black border-b border-orange-500 sticky top-0 z-50">
+        <div class="max-w-screen-2xl mx-auto px-6 py-5 flex items-center justify-between">
+            <img src="condomvase.png" alt="Condom Vase" class="logo h-36 w-auto">
+            <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                <a href="#colours" class="hover:text-orange-400">Colours</a>
+                <a href="#ideas" class="hover:text-orange-400">Gift Ideas</a>
+                <a href="#reviews" class="hover:text-orange-400">Reviews</a>
+                <a href="#bulk" onclick="showBulk()" class="hover:text-orange-400">Bulk Orders</a>
+            </div>
+            <a href="#orderFormSection" class="px-8 py-3.5 bg-orange-500 hover:bg-orange-400 text-black font-semibold rounded-2xl">Buy Now (1-10) — €15</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero-bg">
+        <div class="max-w-screen-2xl mx-auto px-6 text-center">
+            <h1 class="text-6xl md:text-7xl font-bold heading-font text-white glow leading-none mb-6">THE CONDOM VASE</h1>
+            <p class="max-w-2xl mx-auto text-2xl md:text-3xl text-orange-200 mb-10">Romance, roses, and a cheeky sense of humour in one beautiful centerpiece.</p>
+            <a href="#orderFormSection" class="inline-block px-12 py-5 bg-orange-500 hover:bg-orange-400 text-black font-bold text-xl rounded-3xl transition-all">Buy Now (1-10) 💋</a>
+        </div>
+    </header>
+
+    <!-- Colours with Meanings -->
+    <section id="colours" class="py-20 bg-zinc-900">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <h2 class="text-5xl font-bold heading-font text-center mb-6">Choose Your Condom Colour, Choose Your Vibe</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="color-card bg-black p-8 rounded-3xl text-center border border-pink-400">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-pink-300 to-rose-400 rounded-2xl flex items-center justify-center text-5xl">🌸</div>
+                    <h3 class="text-2xl font-semibold mb-2">Classic Pink</h3>
+                    <p class="text-orange-200 text-sm mb-4">Soft, playful, and always ready for romance. The original lover.</p>
+                    <a href="https://www.durex.com/products/condoms/durex-extra-safe" target="_blank" class="text-xs bg-pink-900 hover:bg-pink-800 px-5 py-2 rounded-full inline-block">Shop Durex Pink →</a>
+                </div>
+                <div class="color-card bg-black p-8 rounded-3xl text-center border border-red-500">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-red-500 to-rose-600 rounded-2xl flex items-center justify-center text-5xl">🔥</div>
+                    <h3 class="text-2xl font-semibold mb-2">Passion Red</h3>
+                    <p class="text-orange-200 text-sm mb-4">Hot, bold, and unapologetic. For fiery passionate nights.</p>
+                    <a href="https://www.durex.com/products/condoms/durex-pleasuremax" target="_blank" class="text-xs bg-red-900 hover:bg-red-800 px-5 py-2 rounded-full inline-block">Shop Durex Red →</a>
+                </div>
+                <div class="color-card bg-black p-8 rounded-3xl text-center border border-black">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-zinc-900 to-black rounded-2xl flex items-center justify-center text-5xl">🖤</div>
+                    <h3 class="text-2xl font-semibold mb-2">Midnight Black</h3>
+                    <p class="text-orange-200 text-sm mb-4">Mysterious and naughty. Perfect for after-dark mischief.</p>
+                    <a href="https://www.durex.com/products/condoms/durex-invisible-extra-thin" target="_blank" class="text-xs bg-zinc-800 hover:bg-zinc-700 px-5 py-2 rounded-full inline-block">Shop Durex Black →</a>
+                </div>
+                <div class="color-card bg-black p-8 rounded-3xl text-center border border-amber-300">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-amber-100 to-transparent border-2 border-orange-300 rounded-2xl flex items-center justify-center text-5xl">✨</div>
+                    <h3 class="text-2xl font-semibold mb-2">Crystal Clear</h3>
+                    <p class="text-orange-200 text-sm mb-4">Pure transparency. Nothing to hide — love in full glorious detail.</p>
+                    <a href="https://www.durex.com/products/condoms/durex-nude" target="_blank" class="text-xs bg-amber-900 hover:bg-amber-800 px-5 py-2 rounded-full inline-block">Shop Durex Clear →</a>
+                </div>
+                <div class="color-card bg-black p-8 rounded-3xl text-center border border-purple-400">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-purple-400 to-violet-500 rounded-2xl flex items-center justify-center text-5xl">💜</div>
+                    <h3 class="text-2xl font-semibold mb-2">Royal Purple</h3>
+                    <p class="text-orange-200 text-sm mb-4">Luxury, playfulness, and a touch of royal mischief.</p>
+                    <a href="https://www.durex.com/products/condoms/durex-real-feel" target="_blank" class="text-xs bg-purple-900 hover:bg-purple-800 px-5 py-2 rounded-full inline-block">Shop Durex Purple →</a>
+                </div>
+                <div class="color-card bg-black p-8 rounded-3xl text-center border border-blue-400">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-2xl flex items-center justify-center text-5xl">🌊</div>
+                    <h3 class="text-2xl font-semibold mb-2">Ocean Blue</h3>
+                    <p class="text-orange-200 text-sm mb-4">Cool, fresh, and perfect for long-distance romance.</p>
+                    <a href="https://www.durex.com/products/condoms/durex-feel-thin" target="_blank" class="text-xs bg-blue-900 hover:bg-blue-800 px-5 py-2 rounded-full inline-block">Shop Durex Blue →</a>
+                </div>
+                <div class="color-card bg-black p-8 rounded-3xl text-center border border-emerald-400">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-2xl flex items-center justify-center text-5xl">🍃</div>
+                    <h3 class="text-2xl font-semibold mb-2">Emerald Green</h3>
+                    <p class="text-orange-200 text-sm mb-4">Fresh, natural, and eco-flirty energy.</p>
+                    <a href="https://www.durex.com/products/condoms/durex-nature" target="_blank" class="text-xs bg-emerald-900 hover:bg-emerald-800 px-5 py-2 rounded-full inline-block">Shop Durex Green →</a>
+                </div>
+                <div class="color-card bg-black p-8 rounded-3xl text-center border border-yellow-400">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-yellow-300 to-amber-400 rounded-2xl flex items-center justify-center text-5xl">☀️</div>
+                    <h3 class="text-2xl font-semibold mb-2">Golden Glow</h3>
+                    <p class="text-orange-200 text-sm mb-4">Warm, sunny, honeymoon energy.</p>
+                    <a href="https://www.durex.com/products/condoms/durex-sensilube" target="_blank" class="text-xs bg-yellow-900 hover:bg-yellow-800 px-5 py-2 rounded-full inline-block">Shop Durex Gold →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gift Ideas -->
+    <section id="ideas" class="py-20 bg-black">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <h2 class="text-5xl font-bold heading-font text-center mb-16">Perfect Gifts for Every Occasion</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-zinc-900 p-8 rounded-3xl text-center">
+                    <div class="text-6xl mb-6">💐</div>
+                    <h3 class="text-2xl font-semibold mb-3">Mother’s Day</h3>
+                    <p class="text-orange-200">"Here’s the condom you didn’t use when you conceived me." Guaranteed laughs and the best story at the dinner table.</p>
+                </div>
+                <div class="bg-zinc-900 p-8 rounded-3xl text-center">
+                    <div class="text-6xl mb-6">💍</div>
+                    <h3 class="text-2xl font-semibold mb-3">For Your Fiancé</h3>
+                    <p class="text-orange-200">"Here’s a condom we don’t need anymore — now it holds roses. Avoid small pricks though 😉"</p>
+                </div>
+                <div class="bg-zinc-900 p-8 rounded-3xl text-center">
+                    <div class="text-6xl mb-6">✈️</div>
+                    <h3 class="text-2xl font-semibold mb-3">Long Distance Love</h3>
+                    <p class="text-orange-200">A rose in the vase to remind them of you. Or, if mischief happens… at least they’ll think of you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Anthony's Mum Review -->
+<section id="reviews" class="py-20 bg-zinc-900">
+    <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-5xl font-bold heading-font text-center mb-16">Real Roses, Real Laughs</h2>
+        <div class="bg-black rounded-3xl p-10 md:p-16">
+            <div class="flex flex-col md:flex-row gap-10 items-center">
+                <div class="w-64 h-64 flex-shrink-0 bg-zinc-800 rounded-3xl overflow-hidden border-4 border-orange-400 shadow-xl">
+                    <img src="anthonys-mum.jpg" alt="Anthony's Mum" class="w-full h-full object-cover">
+                </div>
+                <div class="flex-1">
+                    <div class="text-6xl mb-6 text-yellow-400">★★★★★</div>
+                    <p class="text-2xl leading-relaxed italic text-orange-100 mb-8">
+                        “I bought this for my mum as a Mother’s Day gift. I told her ‘Here’s the condom you didn’t use when you conceived me’ — she laughed so hard she nearly dropped her tea! 
+                        She put it high up on the shelf so it wouldn’t get knocked over. It looks lovely from a distance, but every visitor does a double-take and giggles. 
+                        Best gift I’ve ever given her. Highly recommend for a laugh, a great conversation starter and actually a beautiful rose holder.”
+                    </p>
+                    <div class="pt-6 border-t border-orange-900">
+                        <p class="font-semibold">— Anthony</p>
+                        <p class="text-orange-400 text-sm">Buying for my wonderful mum</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  
+
+    <!-- Individual Order Form -->
+    <section id="orderFormSection" class="py-20 bg-zinc-900">
+        <div class="max-w-2xl mx-auto px-6">
+            <h2 class="text-5xl font-bold heading-font text-center mb-4">Order Your Vase (1-10)</h2>
+            <form id="orderForm" class="space-y-8">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div><label class="block text-sm font-medium mb-2">Your Name</label>
+                        <input type="text" name="name" required class="w-full bg-black border border-orange-500 rounded-2xl px-6 py-4"></div>
+                    <div><label class="block text-sm font-medium mb-2">Email</label>
+                        <input type="email" name="email" required class="w-full bg-black border border-orange-500 rounded-2xl px-6 py-4"></div>
+                </div>
+                <div><label class="block text-sm font-medium mb-2">Delivery Address</label>
+                    <input type="text" name="address" required class="w-full bg-black border border-orange-500 rounded-2xl px-6 py-4"></div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Quantity (1-10)</label>
+                        <select id="quantity" name="quantity" class="w-full bg-black border border-orange-500 rounded-2xl px-6 py-4">
+                            <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+                            <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+                            <option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Preferred Colour</label>
+                        <select name="colour" class="w-full bg-black border border-orange-500 rounded-2xl px-6 py-4">
+                            <option value="Classic Pink">Classic Pink</option>
+                            <option value="Passion Red">Passion Red</option>
+                            <option value="Midnight Black">Midnight Black</option>
+                            <option value="Crystal Clear">Crystal Clear</option>
+                            <option value="Royal Purple">Royal Purple</option>
+                            <option value="Ocean Blue">Ocean Blue</option>
+                            <option value="Emerald Green">Emerald Green</option>
+                            <option value="Golden Glow">Golden Glow</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <label class="flex items-center gap-3"><input type="checkbox" id="withBox" name="withBox" class="accent-orange-500"> Gift box (€2.50 each)</label>
+                    <label class="flex items-center gap-3"><input type="checkbox" id="discreet" name="discreet" class="accent-orange-500"> Discreet packaging (€1.00)</label>
+                    <label class="flex items-center gap-3"><input type="checkbox" id="secureShipping" name="secureShipping" class="accent-orange-500"> Tracked & insured (+€5.50)</label>
+                </div>
+
+                <p class="text-xs text-orange-300 text-center">* If your chosen colour is out of stock, we will send the closest available shade.</p>
+
+                <div class="text-center py-6 border border-dashed border-orange-500 rounded-3xl">
+                    <div id="totalSection" class="text-4xl font-bold">
+                        Total: <span id="currencySymbol">€</span><span id="total">15.00</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full py-6 bg-orange-500 hover:bg-orange-400 text-black font-bold text-2xl rounded-3xl">COMPLETE ORDER SECURELY 💖</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Bulk Orders -->
+    <section id="bulk" class="py-20 bg-black hidden">
+        <div class="max-w-screen-2xl mx-auto px-6 text-center">
+            <h2 class="text-5xl font-bold heading-font mb-6">Bulk Orders (10+)</h2>
+            <form action="https://formspree.io/f/mjkaqqqk" method="POST" class="max-w-md mx-auto space-y-6">
+                <select name="bulk_quantity" class="w-full bg-black border border-orange-500 rounded-2xl px-6 py-4">
+                    <option value="">Select quantity</option>
+                    <option value="10">10 vases</option>
+                    <option value="20">20 vases</option>
+                    <option value="30">30 vases</option>
+                    <option value="40">40 vases</option>
+                    <option value="50">50 vases</option>
+                    <option value="50+">50+ (custom quote)</option>
+                </select>
+                <input type="email" name="email" placeholder="Your Email" required class="w-full bg-black border border-orange-500 rounded-2xl px-6 py-4">
+                <textarea name="message" placeholder="How soon do you need them? Any special requests?" rows="4" class="w-full bg-black border border-orange-500 rounded-2xl px-6 py-4"></textarea>
+                <button type="submit" class="w-full py-6 bg-orange-500 hover:bg-orange-400 text-black font-bold text-xl rounded-3xl">Send Enquiry — Get Quotation</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-black py-12 border-t border-orange-900 text-center">
+        <img src="condomvase.png" alt="Condom Vase" class="logo mx-auto mb-4 h-28 w-auto">
+        <p>&copy; 2026 Condom Vase • Made with love, latex &amp; laughter</p>
+    </footer>
+
+    <script>
+        function showBulk() {
+            document.getElementById('bulk').classList.remove('hidden');
+            document.getElementById('bulk').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            function calculateTotal() {
+                const qty = parseInt(document.getElementById('quantity').value) || 1;
+                const secure = document.getElementById('secureShipping').checked;
+                const box = document.getElementById('withBox').checked;
+                const discreet = document.getElementById('discreet').checked;
+
+                let basePriceEur = 15;
+                let shippingEur = 6.50;
+
+                if (qty >= 10) basePriceEur *= 0.9;
+                if (qty > 1) shippingEur = Math.round(shippingEur * 1.5 * 100) / 100;
+
+                let subtotalEur = (qty * basePriceEur) + (box ? 2.50 * qty : 0) + (discreet ? 1.00 : 0) + (secure ? 5.50 : 0) + shippingEur;
+
+                document.getElementById('total').textContent = subtotalEur.toFixed(2);
+                document.getElementById('currencySymbol').textContent = '€';
+            }
+
+            ['quantity','withBox','discreet','secureShipping'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.addEventListener('change', calculateTotal);
+            });
+
+            calculateTotal();
+
+            document.getElementById('orderForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert("Thank you for your order! 💖 Your condom vase(s) are on the way.");
+            });
+        });
+    </script>
+</body>
+</html>
